@@ -1,82 +1,103 @@
-# E-Commerce Operations & Customer Experience Analysis
+# Olist E-Commerce Business Analytics Project
 
-## Overview
-This independent MIS project analyzes the Olist Brazilian E-Commerce dataset to better understand the relationship between delivery performance, customer satisfaction, sales, and overall business operations.
+## Project Overview
 
-The goal of the project is to identify operational issues and provide data-backed recommendations that could improve customer experience and business performance.
+This project analyzes Brazilian e-commerce data from Olist to identify business trends, customer behavior, operational challenges, and opportunities for improvement.
 
-## Business Questions
-This project aims to answer questions such as:
-
-- Which product categories generate the most revenue?
-- How does delivery performance affect customer review scores?
-- Which product categories experience the most delivery delays?
-- What factors are associated with poor customer satisfaction?
-- How do sales and order volume change over time?
-- Which areas of the business should management prioritize for improvement?
-
-## Dataset
-Source: Olist Brazilian E-Commerce Public Dataset
-
-The dataset contains approximately 100,000 anonymized e-commerce orders and includes information about:
-
-- Orders
-- Customers
-- Products
-- Payments
-- Sellers
-- Delivery performance
-- Customer reviews
+I used Google BigQuery and SQL to analyze multiple relational datasets, then built an Excel dashboard to communicate the most important findings and business recommendations.
 
 ## Tools Used
 
+- Google BigQuery
 - SQL
 - Microsoft Excel
-- PivotTables
-- Data Visualization
-- GitHub
+- PivotTables and charts
+- Data visualization
+- Business analysis
 
-## Project Process
+## Business Questions
 
-1. Reviewed and cleaned the dataset.
-2. Connected multiple datasets using SQL.
-3. Analyzed sales, delivery, and customer satisfaction metrics.
-4. Identified patterns and operational issues.
-5. Built an Excel dashboard to visualize key findings.
-6. Developed business recommendations based on the analysis.
+This analysis focused on several key questions:
 
-## Key Findings
-
-This section will be completed after the analysis.
-
-Examples of findings may include:
-
-- Relationship between late deliveries and review scores
-- Highest-revenue product categories
-- Categories with poor delivery performance
-- Changes in sales over time
-- Areas with high order volume or customer dissatisfaction
+- How has revenue changed over time?
+- Which product categories generate the most revenue?
+- How valuable are repeat customers compared with one-time customers?
+- How do late deliveries affect customer satisfaction?
+- Which states have the highest late-delivery rates?
+- Is there a relationship between shipping costs and delivery performance?
 
 ## Dashboard
 
-Dashboard screenshots will be added here once the analysis is complete.
+![Olist Business Analytics Dashboard](olist_dashboard.png)
+
+## Key Findings
+
+### Customer Retention
+Only **3.0% of customers made more than one purchase**.
+
+However, repeat customers generated approximately **R$260 in average customer value compared with R$138 for one-time customers**, making repeat customers about **89% more valuable on average**.
+
+### Delivery Performance & Customer Satisfaction
+Late deliveries had a major relationship with customer satisfaction.
+
+- Late deliveries averaged **2.57 / 5 stars**
+- On-time deliveries averaged **4.29 / 5 stars**
+- **54.0% of late orders received a 1–2 star review**
+- Only **9.2% of on-time orders received a 1–2 star review**
+
+### Product Performance
+Health & Beauty generated the highest product revenue at approximately **R$1.23 million**, followed by Watches & Gifts at approximately **R$1.17 million**.
+
+### Regional Delivery Performance
+Delivery performance varied significantly by state.
+
+The highest late-delivery rates included:
+
+- AL — **23.93%**
+- MA — **19.67%**
+- PI — **15.97%**
+- CE — **15.32%**
+- SE — **15.22%**
+
+### Shipping Efficiency
+Some regions experienced both high freight costs and elevated late-delivery rates. The analysis showed a slight positive relationship between freight cost as a percentage of product value and late-delivery rates, although shipping cost alone does not explain delivery performance.
 
 ## Business Recommendations
 
-This section will contain data-backed recommendations based on the final analysis.
+1. Prioritize delivery improvements in regions with high late-delivery rates.
+2. Develop retention strategies to encourage more first-time customers to make additional purchases.
+3. Protect and expand strong product categories such as Health & Beauty.
+4. Investigate carrier and fulfillment performance in high-cost shipping regions.
 
-## Skills Demonstrated
+## SQL Analysis
 
-- SQL querying
-- Relational data analysis
-- Data cleaning
-- Microsoft Excel
-- Dashboard creation
-- Business analysis
-- Data visualization
-- Problem solving
-- Translating data into business recommendations
+The SQL queries used for this project are available in:
 
-## Project Status
+`sql/analysis_queries.sql`
 
-🚧 In Progress
+The analysis included:
+
+- Multi-table SQL joins
+- Aggregations
+- Common Table Expressions (CTEs)
+- Conditional calculations
+- Customer segmentation
+- Revenue analysis
+- Logistics analysis
+- Customer review analysis
+
+## Dataset
+
+Brazilian E-Commerce Public Dataset by Olist, available through Kaggle.
+
+The dataset contains anonymized information about orders, customers, products, payments, reviews, sellers, and delivery performance.
+
+## Project Files
+
+- `Olist_Business_Analytics_Project.xlsx` — Excel analysis and dashboard
+- `olist_dashboard.png` — Dashboard preview
+- `sql/analysis_queries.sql` — SQL queries used for the analysis
+
+## What I Learned
+This project helped me strengthen my ability to use SQL and relational data to investigate business problems, identify meaningful trends, and translate analytical findings into clear business recommendations.
+This project helped me strengthen my ability to use SQL and relational data to investigate business problems, identify meaningful trends, and translate analytical findings into clear business recommendations.
